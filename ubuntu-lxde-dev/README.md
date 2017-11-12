@@ -32,6 +32,26 @@ Run the image ONLY allowing VNC connections with password
 docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-dev
 ```  
 
+### Mount present (current) directory with container
+```console
+docker run -it --rm -p 8080:80 -v $PWD:/root/Desktop jdelemar/ubuntu-lxde-dev
+```  
+
+### Copy files to and from container
+```bash
+# connect to container giving the container a name
+docker run -it --rm -p 8080:80 --name ubuntu-dev jdelemar/ubuntu-lxde-dev
+# copy file to container
+# example: docker cp <filename> <container name>:</path/to/file/filename>
+docker cp mypicture.jpg ubuntu-dev:/root/Desktop/mypicture.jpg
+# copy file from container
+# example: docker cp <container name>:</path/to/source/filename> <destination filename> 
+docker cp ubuntu-dev:/etc/hosts ./hosts
+```  
+
+## Container size
+1.42GB  
+
 ## Issues/Comments
 Google Chrome does not run unless you type the following from terminal `google-chrome-stable --no-sandbox`  
 Current user is root with no password  
