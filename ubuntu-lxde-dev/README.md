@@ -34,6 +34,8 @@ Current user is root with no password
 Communication to container is in plain text over http
 
 ## Sources
+Source repository [jdelemar/ubuntu-lxde-dev](https://github.com/JDelemar/dockerfiles/tree/master/ubuntu-lxde-dev)
+Docker repository [jdelemar/ubuntu-lxde-dev](https://hub.docker.com/r/jdelemar/ubuntu-lxde-dev/)
 docker-ubuntu-vnc-desktop [Docker hub](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/), [Github](https://github.com/fcwu/docker-ubuntu-vnc-desktop)
 jessfraz's [VSCode docker file](https://github.com/jessfraz/dockerfiles/blob/master/vscode/Dockerfile)
 Nodejs [Dockerfile](https://github.com/nodejs/docker-node)
