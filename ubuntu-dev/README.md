@@ -14,18 +14,18 @@ The development environment is composed of the following:
 ### Run the image in a container
 Run the image on port 8080
 ```console
-docker run -it --rm -p 8080:80 jdelemar/docker-dev
+docker run -it --rm -p 8080:80 jdelemar/ubuntu-lxde-dev
 ```
 To see the desktop, browse [http://localhost:8080](http://localhost:8080)
 
 ### Run the image and allow VNC connections
 Run the image allowing VNC connections without password
 ```console
-docker run -it --rm -p 8080:80 -p 5900:5900 jdelemar/docker-dev
+docker run -it --rm -p 8080:80 -p 5900:5900 jdelemar/ubuntu-lxde-dev
 ```
 Run the image allowing VNC connections with password
 ```console
-docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/docker-dev
+docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-dev
 ```
 
 ## Issues/Comments
