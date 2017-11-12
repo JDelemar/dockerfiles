@@ -1,5 +1,3 @@
-# Docker Linux Development Environment
-
 ## Ubuntu LXDE development environment
 Ubuntu lightweight desktop development environment with VNC interface based on [dorowu/ubuntu-desktop-lxde-vnc](https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/)  
   
