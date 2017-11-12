@@ -23,9 +23,13 @@ Run the image allowing VNC connections without password
 ```console
 docker run -it --rm -p 8080:80 -p 5900:5900 jdelemar/ubuntu-lxde-dev
 ```
-Run the image allowing VNC connections with password
+Run the image allowing VNC connections with password (http still alowed)
 ```console
 docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-dev
+```  
+Run the image ONLY allowing VNC connections with password
+```console
+docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-dev
 ```  
 
 ## Issues/Comments
