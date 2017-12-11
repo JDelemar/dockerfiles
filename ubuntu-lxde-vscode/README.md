@@ -3,7 +3,7 @@ Ubuntu lightweight desktop environment with VNC interface based on [dorowu/ubunt
   
 The destop environment is composed of the following:
 - Ubuntu LXDE desktop base environment [jdelemar/ubuntu-lxde-base](https://hub.docker.com/r/jdelemar/ubuntu-lxde-base/)
-- Visual Studio Code 1.18.0  
+- Visual Studio Code 1.18.1  
 
 ## How to use
 ### Run the image in a container
