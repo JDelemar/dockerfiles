@@ -3,40 +3,52 @@ Ubuntu lightweight desktop environment with VNC interface based on [dorowu/ubunt
   
 The base environment is composed of the following:
 - Unbuntu 16.04
-- Firefox 56.0
-- Google Chrome 62.0.3202.89
+- Firefox 57.0.4
+- Google Chrome 63.0.3239.132
 
 ## How to use
 ### Run the image in a container
 Run the image on port 8080
 ```console
-docker run -it --rm -p 8080:80 jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
 ```
 To see the desktop, browse [http://localhost:8080](http://localhost:8080)
 
 ### Run the image and allow VNC connections
-Run the image allowing VNC connections without password
+Run the image allowing VNC connections without password - VNC to port 5900 without password or use http://localhost:8080/vnc.html
 ```console
-docker run -it --rm -p 8080:80 -p 5900:5900 jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 -p 5900:5900 --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
 ```  
-Run the image allowing VNC connections with password (http still alowed)
+Run the image allowing VNC connections with password (http still alowed) - VNC to port 5900 with password or use http://localhost:8080/vnc.html
 ```console
-docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
 ```  
-Run the image ONLY allowing VNC connections with password
+Run the image ONLY allowing VNC connections with password - VNC to port 5900 with password
 ```console
-docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
 ```  
+
+### Run the image with an encrypted connection
+After running the container with the below command connect to it in your browser using https://localhost:6801/vnc.html
+```console
+docker run -it --rm -p 6801:6801 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
+```
+
+### Run the container in detached mode
+To run the container in detached mode so it won't remove itself after exiting replace the `-it --rm` options with `-d`
+```console
+docker run -d -p 8080:80 --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
+```
 
 ### Mount present (current) directory with container
 ```console
-docker run -it --rm -p 8080:80 -v $PWD:/root/Desktop jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 --security-opt seccomp:seccomp/chrome.json -v $PWD:/root/Desktop jdelemar/ubuntu-lxde-base
 ```  
 
 ### Copy files to and from container
 ```bash
 # connect to container giving the container a name
-docker run -it --rm -p 8080:80 --name ubuntu-base jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 --security-opt seccomp:seccomp/chrome.json --name ubuntu-base jdelemar/ubuntu-lxde-base
 # copy file to container
 # example: docker cp <filename> <container name>:</path/to/file/filename>
 docker cp mypicture.jpg ubuntu-base:/root/Desktop/mypicture.jpg
@@ -46,12 +58,15 @@ docker cp ubuntu-base:/etc/hosts ./hosts
 ```  
 
 ## Container size
-1.17GB  
+1.21GB  
 
+## Additional notes
+The `--security-opt seccomp:seccomp/chrome.json` option is for allowing a normal user to run the Google Chrome browser (google-chrome-stable)  
+Without the above options Chrome would have to be started from the terminal with `google-chrome-stable --no-sandbox`. You will receive a warning that says `You are using an unsupported command-line flag: --no-sandbox. Stability and security will suffer.`  
+  
 ## Issues/Comments
-Google Chrome does not run unless you type the following from terminal `google-chrome-stable --no-sandbox`  
 Current user is root with no password  
-Communication to container is in plain text over http  
+There is non-root user called `user`, to switch to the user type `su user` in the console
 
 ## Sources
 Source repository [jdelemar/ubuntu-lxde-base](https://github.com/JDelemar/dockerfiles/tree/master/ubuntu-lxde-base)  
