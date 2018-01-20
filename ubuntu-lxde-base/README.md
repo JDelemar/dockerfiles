@@ -61,8 +61,8 @@ docker cp ubuntu-base:/etc/hosts ./hosts
 1.21GB  
 
 ## Additional notes
-The `--security-opt seccomp:seccomp/chrome.json` option is for allowing a normal user to run the Google Chrome browser (google-chrome-stable)  
-Without the above options Chrome would have to be started from the terminal with `google-chrome-stable --no-sandbox`. You will receive a warning that says `You are using an unsupported command-line flag: --no-sandbox. Stability and security will suffer.`  
+The `--security-opt seccomp:seccomp/chrome.json` option is for allowing a normal user to run the Google Chrome browser (google-chrome-stable). The original source folder/file for this option is in [jessfraz's dotfiles](https://github.com/jessfraz/dotfiles/tree/master/etc/docker/seccomp)  
+Without the above option Chrome would have to be started from the terminal with `google-chrome-stable --no-sandbox`. You will receive a warning that says `You are using an unsupported command-line flag: --no-sandbox. Stability and security will suffer.`  
   
 ## Issues/Comments
 Current user is root with no password  
