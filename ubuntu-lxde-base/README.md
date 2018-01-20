@@ -31,7 +31,7 @@ docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword --security-opt secco
 ### Run the image with an encrypted connection
 After running the container with the below command connect to it in your browser using https://localhost:6801/vnc.html
 ```console
-docker run -it --rm -p 6801:6801 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 6081:6081 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json jdelemar/ubuntu-lxde-base
 ```
 
 ### Run the container in detached mode
