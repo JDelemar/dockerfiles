@@ -1,5 +1,5 @@
 # vscode
-FROM jdelemar/ubuntu-lxde-base:0.1.0
+FROM jdelemar/ubuntu-lxde-base:0.1.1
 # source: jessfraz's vscode/Dockerfile https://github.com/jessfraz/dockerfiles/tree/master/vscode
 
 RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | apt-key add -
@@ -31,8 +31,6 @@ RUN apt-get update && apt-get -y install \
     && rm -rf /var/lib/apt/lists/*
 
 ENV HOME /home/user
-RUN useradd --create-home --home-dir $HOME user \
-	&& chown -R user:user $HOME
 
 COPY start.sh /usr/local/bin/start.sh
 
