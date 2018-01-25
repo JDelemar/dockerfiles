@@ -6,22 +6,7 @@ The destop environment is composed of the following:
 - Visual Studio Code 1.19.2  
 
 ## How to use
-### Run the image in a container
-Run the image on port 8080
-```console
-docker run -it --rm -p 8080:80 jdelemar/ubuntu-lxde-vscode
-```
-To see the desktop, browse [http://localhost:8080](http://localhost:8080)
-
-### Run the image and allow VNC connections
-Run the image allowing VNC connections without password
-```console
-docker run -it --rm -p 8080:80 -p 5900:5900 jdelemar/ubuntu-lxde-vscode - VNC to port 5900 without password or browse http://localhost:8080/vnc.html
-```  
-Run the image allowing VNC connections with password (http still alowed)
-```console
-docker run -it --rm -p 8080:80 -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-vscode
-```  
+### Run the image in a container and allow VNC connections
 Run the image ONLY allowing VNC connections with password
 ```console
 docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-vscode
