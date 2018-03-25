@@ -1,5 +1,5 @@
 # vscode
-FROM jdelemar/ubuntu-lxde-base:0.2.1
+FROM jdelemar/ubuntu-lxde-base:0.2.0
 # source: jessfraz's vscode/Dockerfile https://github.com/jessfraz/dockerfiles/tree/master/vscode
 
 RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | apt-key add -
