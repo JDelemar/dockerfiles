@@ -3,8 +3,8 @@ Ubuntu lightweight desktop environment with VNC interface based on [dorowu/ubunt
   
 The base environment is composed of the following:
 - Unbuntu 16.04
-- Firefox 57.0.4
-- Google Chrome 63.0.3239.132
+- Firefox 59.0.1 (Quantum)
+- Google Chrome 65.0.3325.181
 
 ## How to use
 ### Run the image in a container without https
