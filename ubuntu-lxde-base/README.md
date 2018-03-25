@@ -7,33 +7,42 @@ The base environment is composed of the following:
 - Google Chrome 63.0.3239.132
 
 ## How to use
+### Run the image in a container without https
+After running the container with the below command connect to it in your browser using http://localhost:8080
+```bash
+docker run -it --rm -p 8080:80 -e SECURE=false jdelemar/ubuntu-lxde-base
+```
+
 ### Run the image in a container and allow VNC connections
 Run the image ONLY allowing VNC connections with password
-```console
+```bash
+docker run -it --rm -p 5900:5900 -e SECURE=false -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-base
+# OR
 docker run -it --rm -p 5900:5900 -e VNC_PASSWORD=mypassword jdelemar/ubuntu-lxde-base
 ```  
 
 ### Run the image with an encrypted connection
-After running the container with the below command connect to it in your browser using https://localhost:6801/vnc.html
+After running the container with the below command connect to it in your browser using https://localhost:4430/vnc.html
 ```console
-docker run -it --rm -p 6081:6081 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json --name lxde jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 4430:6081 -e VNC_PASSWORD=mypassword --name lxde jdelemar/ubuntu-lxde-base
 ```  
 
 ### Run the container in detached mode
 To run the container in detached mode so it won't remove itself after exiting replace the `-it --rm` options with `-d`
+Example:  
 ```console
-docker run -d -p 6081:6081 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json --name lxde jdelemar/ubuntu-lxde-base
+docker run -d -p 8080:80 -e SECURE=false --name lxde jdelemar/ubuntu-lxde-base
 ```
 
 ### Mount present (current) directory with container
 ```console
-docker run -it --rm -p 6081:6081 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json -v $PWD:/root/Desktop --name lxde jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 -e SECURE=false -v $PWD:/root/Desktop --name lxde jdelemar/ubuntu-lxde-base
 ```  
 
 ### Copy files to and from container
 ```bash
 # connect to container giving the container a name
-docker run -it --rm -p 6081:6081 -e VNC_PASSWORD=mypassword --security-opt seccomp:seccomp/chrome.json --name ubuntu-base jdelemar/ubuntu-lxde-base
+docker run -it --rm -p 8080:80 -e SECURE=false --name ubuntu-base jdelemar/ubuntu-lxde-base
 # copy file to container
 # example: docker cp <filename> <container name>:</path/to/file/filename>
 docker cp mypicture.jpg ubuntu-base:/root/Desktop/mypicture.jpg
