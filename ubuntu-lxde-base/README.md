@@ -52,7 +52,7 @@ docker cp ubuntu-base:/etc/hosts ./hosts
 ```  
 
 ## Container size
-1.21GB  
+1.22GB  
 
 ## Additional notes
 Additions per [fcwu/docker-ubuntu-vnc-desktop](https://github.com/fcwu/docker-ubuntu-vnc-desktop)  
