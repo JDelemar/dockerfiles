@@ -18,7 +18,8 @@ RUN apt-get update \
     # try remove --allow-unauthenticated  up here
     && apt-get install -y --no-install-recommends --allow-unauthenticated \
         supervisor \
-        openssh-server pwgen sudo vim-tiny \
+        # openssh-server pwgen sudo vim-tiny \
+        sudo vim-tiny \
         net-tools \
         lxde x11vnc xvfb \
         gtk2-engines-murrine ttf-ubuntu-font-family \
