@@ -19,7 +19,7 @@ The file manager like application will be available in your browser at http://lo
 
 Files are located in the container at `/var/www/html/files` and by default have `www-data:www-data` permissions  
 
-## Container size
+# Container size
 420MB  
 
 # Sources
