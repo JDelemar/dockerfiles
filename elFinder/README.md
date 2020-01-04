@@ -18,10 +18,11 @@ Files are located in the container at `/var/www/html/files` and by default have 
 
 # Sources
 Source repository [JDelemar/elFinder](https://github.com/JDelemar/dockerfiles/tree/master/elFinder)  
+Docker repository [jdelemar/elFinder](https://hub.docker.com/r/jdelemar/elFinder/)  
 Original elFinder source [on GitHub](https://github.com/Studio-42/elFinder)  
 
 # License
-View [license information](https://github.com/JDelemar/dockerfiles/blob/master/elFinder/LICENSE) for this elFinder Docker project.
+View [license information](https://github.com/JDelemar/dockerfiles/blob/master/elFinder/LISCENSE.md) for this elFinder Docker project.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
 
