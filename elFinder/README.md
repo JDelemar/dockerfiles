@@ -17,7 +17,7 @@ The file manager like application will be available in your browser at http://lo
 Files are located in the container at `/var/www/html/files` and by default have `www-data:www-data` permissions  
 
 # Sources
-Source repository [JDelemar/elFinder](https://github.com/JDelemar/dockerfiles/tree/master/elFinder)  
+GitHub source repository [JDelemar/elFinder](https://github.com/JDelemar/dockerfiles/tree/master/elFinder)  
 Docker repository [jdelemar/elFinder](https://hub.docker.com/r/jdelemar/elFinder/)  
 Original elFinder source [on GitHub](https://github.com/Studio-42/elFinder)  
 
