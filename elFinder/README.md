@@ -1,6 +1,8 @@
 # Unofficial elFinder Docker image
 This images contains [elFinder](https://github.com/Studio-42/elFinder)
 
+![elFinder image](image/elFinderScr.png)
+
 From the author
 > elFinder is an open-source file manager for web, written in JavaScript using jQuery UI. Creation is inspired by simplicity and convenience of Finder program used in Mac OS X operating system.
 
@@ -19,7 +21,7 @@ The file manager like application will be available in your browser at http://lo
 
 Files are located in the container at `/var/www/html/files` and by default have `www-data:www-data` permissions  
 
-## Container size
+# Container size
 420MB  
 
 # Sources
