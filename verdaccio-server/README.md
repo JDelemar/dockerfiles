@@ -3,7 +3,7 @@
 This image allows you to use http-server to quickly browse [Verdaccio's](https://github.com/verdaccio/verdaccio) files in a browser
 
 # Try
-(TODO: place `Try in PWD` button here) 
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/e2bf6ff310e39e3f7e61985fd750d2e2/raw/1b62c2589b5f45c6a1c65ded88f94bb1ddd7aacd/verdaccio-server.yml)  
 
 # How to use this image
 ## Quick start

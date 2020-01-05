@@ -9,7 +9,7 @@ The main purpose of this project is to be able grab npm packages using a browser
 [![code-server](https://github.com/JDelemar/dockerfiles/blob/master/verdaccio-node-code-server/image/ide.gif)](https://coder.com)
 
 # Try
-(TODO: place `Try in PWD` button here)  
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/e2bf6ff310e39e3f7e61985fd750d2e2/raw/1b62c2589b5f45c6a1c65ded88f94bb1ddd7aacd/verdaccio-server.yml)  
 
 # How to use this image
 ## Quick start
@@ -22,7 +22,7 @@ Visual Studio Code will be available in your browser at http://localhost:8443
 ## Other configurations
 ```s
     # Open everything
-    docker run -it --rm -p 8443:8443 -p 4873:4873 -p 8080:8080 -p 4200:4200 verdaccio-node-code-server /bin/bash
+    docker run -it --rm -p 8443:8443 -p 4873:4873 -p 8080:8080 -p 4200:4200 jdelemar/verdaccio-node-code-server /bin/bash
 
     # Some additional settings from Code-Server - see Code-Server via LinuxServer.io link for more
     docker create \
@@ -35,7 +35,7 @@ Visual Studio Code will be available in your browser at http://localhost:8443
         -p 8443:8443 \
         -v /path/to/appdata/config:/config \
         --restart unless-stopped \
-        verdaccio-node-code-server
+        jdelemar/verdaccio-node-code-server
 ```
 - Code-Server: http://localhost:8443
 - Verdaccio  

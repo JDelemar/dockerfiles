@@ -3,7 +3,7 @@
 🎉🐥Disco - distro duck - distro node - 🐳Docker registry with node http-server
 
 # Try
-(TODO: place `Try in PWD` button here) 
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/4ac037427bbbaef43e7efc0ca28fd437/raw/33eeb6975891ba7736dd2d330890fb66087ca19e/registry-server.yml)  
 
 # How to use this image
 ## Quick start
@@ -19,6 +19,15 @@ The Docker registry will be available for connections at localhost:5000
 *Note: No browser response on port 5000*
 
 Type `http-server` or `hs` to browse/download files from the container at http://localhost:8080
+
+## Putting images in this registry  
+```s
+    REGISTRY="localhost:5000"
+    IMAGE="jdelemar/registry-server:latest"
+    docker pull $IMAGE
+    docker tag $IMAGE $REGISTRY/$IMAGE
+    docker push $REGISTRY/$IMAGE
+```  
 
 ### Container info
 📂registry  
