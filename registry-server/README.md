@@ -12,7 +12,22 @@
     # to start the Docker registry server and send it to the background
     # at the prompt type:
     registry serve /etc/docker/registry/config.yml & 
-    # TODO: fix that - automate the things
+    # TODO: fix that - the docker-compose file does not have that issue
+```
+
+`docker-compose.yml`
+```yml
+    version: "3.1"
+
+    services:
+    registry-server:
+        image: jdelemar/registry-server
+        command: >
+            sh -c "registry serve /etc/docker/registry/config.yml &
+                tail -f /dev/null"
+        ports:
+        - 5000:5000
+        - 8080:8080
 ```
 
 The Docker registry will be available for connections at localhost:5000  

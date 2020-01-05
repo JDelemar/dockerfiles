@@ -18,6 +18,18 @@ Nuget command with http-server in a browser
     nuget install Specflow -Version 3.0.225
 ```
 
+`docker.compose.yml`
+```yml
+    version: "3.1"
+
+    services:
+    nuget-server:
+        image: jdelemar/nuget-server
+        command: tail -f /dev/null
+        ports:
+        - 8080:8080
+```  
+
 Type `http-server` or `hs` to browse/download files from the container at http://localhost:8080  
 
 ### Container info

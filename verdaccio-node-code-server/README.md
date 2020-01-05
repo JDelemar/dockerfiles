@@ -9,7 +9,7 @@ The main purpose of this project is to be able grab npm packages using a browser
 [![code-server](https://github.com/JDelemar/dockerfiles/blob/master/verdaccio-node-code-server/image/ide.gif)](https://coder.com)
 
 # Try
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/e2bf6ff310e39e3f7e61985fd750d2e2/raw/1b62c2589b5f45c6a1c65ded88f94bb1ddd7aacd/verdaccio-server.yml)  
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/ccb49cbdf7a785abe98628d981dc7d7d/raw/e5dd108c94f478310abba9e0a426a0dae16234bb/verdaccio-node-code-server.yml)  
 
 # How to use this image
 ## Quick start
@@ -36,7 +36,33 @@ Visual Studio Code will be available in your browser at http://localhost:8443
         -v /path/to/appdata/config:/config \
         --restart unless-stopped \
         jdelemar/verdaccio-node-code-server
+```  
+
+`docker-compose.yml`
+```yml
+    version: "3.1"
+
+    services:
+    verdaccio-node-code-server:
+        image: jdelemar/verdaccio-node-code-server
+        command: >
+            sh -c "verdaccio --listen http://0.0.0.0:4873 &
+                tail -f /dev/null"
+        environment:
+        - PUID=1000
+        - PGID=1000
+        - TZ=America/New_York
+        # - PASSWORD=changeme #optional
+        - SUDO_PASSWORD=changeme #optional
+        # volumes:
+        #  - /path/to/appdata/config:/config
+        ports:
+        - 8443:8443
+        - 4873:4873
+        - 8080:8080
+        - 4200:4200 # just in case
 ```
+
 - Code-Server: http://localhost:8443
 - Verdaccio  
     - Start `verdaccio --listen http://0.0.0.0:4873`
