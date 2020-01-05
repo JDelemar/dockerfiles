@@ -1,4 +1,4 @@
-# Vercaccio, Visual Studio Code, and nodejs
+# Verdaccio, Visual Studio Code, and nodejs
 
 Verdaccio, Visual Studio Code, and nodejs walk into a bar
 
