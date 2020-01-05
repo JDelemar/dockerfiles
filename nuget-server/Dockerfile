@@ -1,17 +1,11 @@
-# Works 618MB
-FROM mono:6.6.0.161-slim
+FROM node:12.14.0-alpine
 
-RUN apt-get update \
-  && apt-get install -y mono-runtime ca-certificates-mono nuget
+ENV NUGET_VERSION=5.2.0
 
-RUN apt-get install -y curl sudo
-
-RUN curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - \
-    && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - \
-    && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list \
-RUN apt-get update && apt-get install -y nodejs \
-        build-essential \
-        yarn \
-    && rm -rf /var/lib/apt/lists/* /tmp/* \
-    && apt-get autoclean \
-    && apt-get autoremove
+RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
+    && apk add --no-cache ca-certificates mono \
+    && cert-sync /etc/ssl/certs/ca-certificates.crt \
+    && wget -P /usr/lib/mono https://dist.nuget.org/win-x86-commandline/v${NUGET_VERSION}/nuget.exe \
+    && echo -e '#!/bin/sh\nexec /usr/bin/mono $MONO_OPTIONS /usr/lib/mono/nuget.exe "$@"' > /usr/bin/nuget \
+    && chmod a+x /usr/bin/nuget \
+    && npm install -g http-server
