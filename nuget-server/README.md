@@ -1,6 +1,7 @@
-# Verdaccio with http-server
+# Nuget with http-server
 
-This image allows you to use http-server to quickly browse [Verdaccio's](https://github.com/verdaccio/verdaccio) files in a browser
+Nuget, Nuget, Nuget what I want  
+Nuget command with http-server in a browser  
 
 # Try
 (TODO: place `Try in PWD` button here) 
@@ -8,26 +9,28 @@ This image allows you to use http-server to quickly browse [Verdaccio's](https:/
 # How to use this image
 ## Quick start
 ```s
-    docker run -it -p 4873:4873 -p 8080:8080 jdelemar/verdaccio-server /bin/sh
+    docker run -it -p 8080:8080 jdelemar/nuget-server /bin/sh
     # at the command prompt type:
-    $VERDACCIO_APPDIR/bin/verdaccio --config /verdaccio/conf/config.yaml --listen $VERDACCIO_PROTOCOL://0.0.0.0:$VERDACCIO_PORT
-    # TODO: will fix that later
+    cd ~
+    # to get a NuGet package and all it's dependencies
+    # nuget install packageId|pathToPackagesConfig
+    # ex:
+    nuget install Specflow -Version 3.0.225
 ```
-
-Verdaccio will be available in your browser at http://localhost:4873  
 
 Type `http-server` or `hs` to browse/download files from the container at http://localhost:8080  
 
 ### Container info
-📂verdaccio - `/verdaccio`, ⭐️`/verdaccio/storage`  
-📏137MB  
-🛳4873 - Verdaccio  
+📂nuget - `~/nuget`  
+📏396MB  
 🛳8080 - http-server  
 
 # Sources
-[GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/verdaccio-server)  
-[Docker repository](https://hub.docker.com/r/jdelemar/verdaccio-server)  
-[Verdaccio source code](https://github.com/verdaccio/verdaccio)  
+[GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/nuget-server)  
+[Docker repository](https://hub.docker.com/r/jdelemar/nuget-server)  
+[CenterEdge Docker.NuGetClient source code](https://github.com/CenterEdge/Docker.NuGetClient)  
+[CERTIFICATE_VERIFY_FAILED using Microsoft.SharePoint.Client package](https://github.com/Docker-Hub-frolvlad/docker-alpine-mono/issues/7)  
+[Mono Docker image](https://github.com/mono/docker)
 
 # License
 View [license information](https://github.com/JDelemar/dockerfiles/blob/master/LICENSE) for this Docker project.  
