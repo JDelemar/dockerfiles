@@ -1,10 +1,10 @@
 # Vercaccio, Visual Studio Code, and nodejs
 
-Verdaccio, Visual Studio Code, and nodejs walk into a bar  
+Verdaccio, Visual Studio Code, and nodejs walk into a bar
 
 This image contains [Verdaccio](https://github.com/verdaccio/verdaccio), [Visual Studio Code](https://code.visualstudio.com/) via [Coder](https://coder.com/), and [nodejs](https://nodejs.org/)  
 
-The main purpose of this project is to be able grab npm packages to have them offline
+The main purpose of this project is to be able grab npm packages using a browser as an interface
 
 [![code-server](https://github.com/JDelemar/dockerfiles/blob/master/verdaccio-node-code-server/image/ide.gif)](https://coder.com)
 
