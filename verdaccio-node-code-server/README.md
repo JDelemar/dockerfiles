@@ -6,7 +6,7 @@ This image contains [Verdaccio](https://github.com/verdaccio/verdaccio), [Visual
 
 The main purpose of this project is to be able grab npm packages to have them offline
 
-[![code-server](image/ide.gif)](https://coder.com)
+[![code-server](https://github.com/JDelemar/dockerfiles/blob/master/verdaccio-node-code-server/image/ide.gif)](https://coder.com)
 
 # Try
 (TODO: place `Try in PWD` button here)  
@@ -29,7 +29,7 @@ Visual Studio Code will be available in your browser at http://localhost:8443
         --name=code-server \
         -e PUID=1000 \
         -e PGID=1000 \
-        -e TZ=Europe/London \
+        -e TZ=America/New_York \
         -e PASSWORD=password `#optional` \
         -e SUDO_PASSWORD=password `#optional` \
         -p 8443:8443 \
