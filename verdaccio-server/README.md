@@ -16,6 +16,7 @@ Verdaccio will be available in your browser at http://localhost:4873
 Type `http-server` or `hs` to browse/download files from the container at http://localhost:8080  
 
 ### Container info
+🐧Alpine Linux
 📂verdaccio - `/verdaccio`, ⭐️`/verdaccio/storage`  
 📏137MB  
 🛳4873 - Verdaccio  

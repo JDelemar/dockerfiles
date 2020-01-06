@@ -3,7 +3,7 @@
 🎉🐥Disco - distro duck - distro node - 🐳Docker registry with node http-server
 
 # Try
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/4ac037427bbbaef43e7efc0ca28fd437/raw/33eeb6975891ba7736dd2d330890fb66087ca19e/registry-server.yml)  
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/4ac037427bbbaef43e7efc0ca28fd437/raw/afaf9e00ebccd18ecca464460a2e83834f4acfc9/registry-server.yml)  
 
 # How to use this image
 ## Quick start

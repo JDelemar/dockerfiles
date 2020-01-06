@@ -4,7 +4,7 @@ Nuget, Nuget, Nuget what I want
 Nuget command with http-server in a browser  
 
 # Try
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/4c6ef899c98f3f52921881c646e9f0aa/raw/34c7765cebcdfe8445c14df1e2062bdcb309d4bd/nuget-server.yml)  
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/4c6ef899c98f3f52921881c646e9f0aa/raw/faf3c5d2ff6df7772864018fb42dc918eacd442d/nuget-server.yml)  
 
 # How to use this image
 ## Quick start

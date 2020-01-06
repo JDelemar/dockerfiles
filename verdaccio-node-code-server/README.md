@@ -72,6 +72,7 @@ Visual Studio Code will be available in your browser at http://localhost:8443
     - http://localhost:8080
 
 ### Container info
+🐧Ubuntu 18.04 Bionic Linux
 📂verdaccio - `/config/.config/verdaccio`, ⭐️`/config/.config/verdaccio/storage`  
 📂workspace - `/config/workspace`  
 📏765MB  
