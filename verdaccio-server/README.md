@@ -8,10 +8,7 @@ This image allows you to use http-server to quickly browse [Verdaccio's](https:/
 # How to use this image
 ## Quick start
 ```s
-    docker run -it -p 4873:4873 -p 8080:8080 jdelemar/verdaccio-server /bin/sh
-    # at the command prompt type:
-    $VERDACCIO_APPDIR/bin/verdaccio --config /verdaccio/conf/config.yaml --listen $VERDACCIO_PROTOCOL://0.0.0.0:$VERDACCIO_PORT
-    # TODO: will fix that later
+    docker run -d -p 4873:4873 -p 8080:8080 jdelemar/verdaccio-server    
 ```
 
 Verdaccio will be available in your browser at http://localhost:4873  
@@ -23,6 +20,10 @@ Type `http-server` or `hs` to browse/download files from the container at http:/
 📏137MB  
 🛳4873 - Verdaccio  
 🛳8080 - http-server  
+
+### Additional notes
+When in interactive mode
+- Start Verdaccio: `$VERDACCIO_APPDIR/bin/verdaccio --config /verdaccio/conf/config.yaml --listen $VERDACCIO_PROTOCOL://0.0.0.0:$VERDACCIO_PORT`
 
 # Sources
 [GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/verdaccio-server)  
