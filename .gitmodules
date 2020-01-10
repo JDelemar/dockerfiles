@@ -1,3 +1,0 @@
-[submodule "ubuntu-lxde-base/docker-ubuntu-vnc-desktop"]
-	path = ubuntu-lxde-base/docker-ubuntu-vnc-desktop
-	url = https://github.com/fcwu/docker-ubuntu-vnc-desktop
