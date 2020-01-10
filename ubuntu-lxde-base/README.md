@@ -33,8 +33,8 @@ For more configurations see the project on [dorowu/ubuntu-desktop-lxde-vnc Docke
 📏1.35GB  
 🛳80 - no VNC web server  
 🛳5900 - VNC server  
-🌐Firefox 69.0.2 (Quantum)
-🌐Google Chrome 79.0.3945.117
+🌐Firefox 69.0.2 (Quantum)  
+🌐Google Chrome 79.0.3945.117  
 
 # Sources
 [GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/ubuntu-lxde-base)  
