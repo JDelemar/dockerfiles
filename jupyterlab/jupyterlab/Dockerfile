@@ -1,39 +1,35 @@
-FROM python:alpine
+FROM python:3.9.0-alpine3.12
 
 # Install required packages
-RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc python-dev make cmake g++ gfortran libpng-dev freetype-dev libxml2-dev libxslt-dev
-RUN apk add --update git
+RUN apk add --update --virtual=.build-dependencies alpine-sdk nodejs ca-certificates musl-dev gcc make cmake g++ gfortran libpng-dev freetype-dev libxml2-dev libxslt-dev
+
+RUN apk add --update npm \
+  # jupyter
+  libffi-dev \
+  # requirements pandas pillow
+  jpeg-dev
 
 # Install Jupyter
 RUN pip install jupyter
-RUN pip install ipywidgets
+# RUN pip install ipywidgets
 RUN jupyter nbextension enable --py widgetsnbextension
 
 # Install JupyterLab
 RUN pip install jupyterlab && jupyter serverextension enable --py jupyterlab
-
-# Additional packages for compatability (glibc)
-RUN wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://raw.githubusercontent.com/sgerrand/alpine-pkg-glibc/master/sgerrand.rsa.pub && \
-  wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.23-r3/glibc-2.23-r3.apk && \
-  wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.23-r3/glibc-i18n-2.23-r3.apk && \
-  wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.23-r3/glibc-bin-2.23-r3.apk && \
-  apk add --no-cache glibc-2.23-r3.apk glibc-bin-2.23-r3.apk glibc-i18n-2.23-r3.apk && \
-  rm "/etc/apk/keys/sgerrand.rsa.pub" && \
-  /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true && \
-  echo "export LANG=C.UTF-8" > /etc/profile.d/locale.sh && \
-  ln -s /usr/include/locale.h /usr/include/xlocale.h
-
-# Optional Clean-up
-#  RUN apk del glibc-i18n && \
-#  apk del .build-dependencies && \
-#  rm glibc-2.23-r3.apk glibc-bin-2.23-r3.apk glibc-i18n-2.23-r3.apk && \
-#  rm -rf /var/cache/apk/*
 
 ENV LANG=C.UTF-8
 
 # Install Python Packages & Requirements (Done near end to avoid invalidating cache)
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+
+# Install TS & ES6 support
+RUN npm install -g tslab && \
+  tslab install
+
+# Optional Clean-up
+RUN apk del .build-dependencies && \
+  rm -rf /var/cache/apk/*
 
 # Expose Jupyter port & cmd
 EXPOSE 8888
