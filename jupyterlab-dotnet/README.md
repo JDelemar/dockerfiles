@@ -6,7 +6,7 @@ This image adds .NET Core to `jdelemar/jupyter` notebook
 
 **Screen shots**  
 ![launcher](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterLauncher.png)  
-![TypeScript](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterTypeScript.png)  
+![TypeScript](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterCSharp.png)  
 
 ## How to use this image
 
