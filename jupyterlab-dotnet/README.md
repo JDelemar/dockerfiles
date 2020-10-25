@@ -8,6 +8,12 @@ This image adds .NET Core to `jdelemar/jupyter` notebook
 ![launcher](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterLauncher.png)  
 ![TypeScript](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterCSharp.png)  
 
+## Try
+
+[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/93f2c88e3fdb00ba7671ea5f68952647/raw/31d14019aa8aca0177894055bcd390f48c83961c/jupyterlab-dotnet.yml)
+
+Note: Check the logs/output for password/token (`docker logs {container_name}`). Also code is currently not executing in PWD  
+
 ## How to use this image
 
 ### Quick start
