@@ -75,3 +75,4 @@ Using VSCode and the Python extension, you can use this as a Jupyter server
         - [Install .NET Core SDK or .NET Core Runtime on Alpine](https://docs.microsoft.com/en-us/dotnet/core/install/linux-alpine)
           - Manual install
       - [Public Preview of PowerShell Support in Jupyter Notebooks](https://devblogs.microsoft.com/powershell/public-preview-of-powershell-support-in-jupyter-notebooks/)
+      - [Working with Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/python/jupyter-support)
