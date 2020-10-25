@@ -31,6 +31,7 @@ This image adds ES6 and Typescript capabilities to the Jupyter Notebook
 🛳 8888  
 🌐 Jupyterlab 2.2.9  
 🌐 Python 3.9.0  
+🌐 TypeScript 3.9.5  
 
 #### Versions
 

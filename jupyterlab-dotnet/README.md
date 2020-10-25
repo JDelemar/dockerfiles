@@ -37,6 +37,7 @@ Note: Check the logs/output for password/token (`docker logs {container_name}`).
 🛳 8888  
 🌐 Jupyterlab 2.2.9  
 🌐 Python 3.9.0  
+🌐 TypeScript 3.9.5  
 🌐 .NET Core SDK 3.1.403
 
 #### Versions
