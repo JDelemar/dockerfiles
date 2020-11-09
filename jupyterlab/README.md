@@ -14,8 +14,8 @@ Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://gith
 This image adds ES6 and Typescript capabilities to the Jupyter Notebook  
 
 **Screen shots**  
-<img src="https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab/images/JupyterLauncher.png" alt="launcher" width="800" />  
-<img src="https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab/images/JupyterTypeScript.png" alt="TypeScript" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab/images/JupyterLauncher.png" alt="launcher" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab/images/JupyterTypeScript.png" alt="TypeScript" width="800" />  
 
 ## How to use this image
 
