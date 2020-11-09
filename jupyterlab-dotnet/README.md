@@ -15,8 +15,8 @@ Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://gith
 This image adds .NET Core to `jdelemar/jupyter` notebook  
 
 **Screen shots**  
-![launcher](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterLauncher.png)  
-![TypeScript](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-dotnet/images/JupyterCSharp.png)  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterLauncher.png" alt="launcher" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterCSharp.png" alt="TypeScript" width="800" />  
 
 ## Try
 

@@ -16,10 +16,9 @@ Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://gith
 This image adds PowerShell to `jdelemar/jupyterlab-dotnet` notebook  
 
 **Screen shots**  
-![launcher](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-powershell/images/JupyterLauncher.png)  
-![TypeScript](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-powershell/images/JupyterPowerShell.png)  
-Using VSCode and the Python extension, you can use this as a Jupyter server
-![VSCode](https://github.com/JDelemar/dockerfiles/blob/master/jupyterlab-powershell/images/VSCodeJupyter.png)  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-powershell/images/JupyterLauncher.png" alt="launcher" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-powershell/images/JupyterPowerShell.png" alt="TypeScript" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-powershell/images/VSCodeJupyter.png" alt="VSCode" width="800" />  
 
 ## How to use this image
 
