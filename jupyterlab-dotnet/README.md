@@ -1,5 +1,15 @@
 # Jupyterlab
 
+![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jdelemar/jupyterlab-dotnet)
+![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jdelemar/jupyterlab-dotnet)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/jdelemar/jupyterlab-dotnet?sort=date)
+
+![Alpine 3.12.1](https://img.shields.io/badge/Alpine-3.12.1-blue.svg?style=flat-square)
+![Juypterlab 2.2.9](https://img.shields.io/badge/Jupyterlab-2.2.9-blue.svg?style=flat-square)
+![Python 3.9.0](https://img.shields.io/badge/Python-3.9.0-blue.svg?style=flat-square)
+![TypeScript 3.9.5](https://img.shields.io/badge/TypeScript-3.9.5-blue.svg?style=flat-square)
+![.NET Core SDK 3.1.403](https://img.shields.io/badge/.NET%20Core%20SDK-3.1.403-blue.svg?style=flat-square)
+
 Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://github.com/mikebirdgeneau/jupyterlab-docker)
 
 This image adds .NET Core to `jdelemar/jupyter` notebook  
