@@ -3,6 +3,7 @@
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/jdelemar/jupyterlab-powershell)
 ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/jdelemar/jupyterlab-powershell)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/jdelemar/jupyterlab-powershell?sort=date)
+![MicroBadger Layers](https://img.shields.io/microbadger/layers/jdelemar/jupyterlab-powershell)
 
 ![Alpine 3.12.1](https://img.shields.io/badge/Alpine-3.12.1-blue.svg?style=flat-square)
 ![Juypterlab 2.2.9](https://img.shields.io/badge/Jupyterlab-2.2.9-blue.svg?style=flat-square)
