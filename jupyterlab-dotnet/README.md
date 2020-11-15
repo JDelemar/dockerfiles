@@ -8,7 +8,7 @@
 ![Juypterlab 2.2.9](https://img.shields.io/badge/Jupyterlab-2.2.9-blue.svg?style=flat-square)
 ![Python 3.9.0](https://img.shields.io/badge/Python-3.9.0-blue.svg?style=flat-square)
 ![TypeScript 3.9.5](https://img.shields.io/badge/TypeScript-3.9.5-blue.svg?style=flat-square)
-![.NET Core SDK 3.1.403](https://img.shields.io/badge/.NET%20Core%20SDK-3.1.403-blue.svg?style=flat-square)
+![.NET Core SDK 3.1.404](https://img.shields.io/badge/.NET%20Core%20SDK-3.1.404-blue.svg?style=flat-square)
 
 Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://github.com/mikebirdgeneau/jupyterlab-docker)
 
@@ -16,7 +16,7 @@ This image adds .NET Core to `jdelemar/jupyter` notebook
 
 **Screen shots**  
 <img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterLauncher.png" alt="launcher" width="800" />  
-<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterCSharp.png" alt="TypeScript" width="800" />  
+<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterDotNet.png" alt="TypeScript" width="800" />  
 
 ## Try
 
@@ -48,7 +48,7 @@ Note: Check the logs/output for password/token (`docker logs {container_name}`).
 🌐 Jupyterlab 2.2.9  
 🌐 Python 3.9.0  
 🌐 TypeScript 3.9.5  
-🌐 .NET Core SDK 3.1.403
+🌐 .NET Core SDK 3.1.404
 
 #### Versions
 
@@ -81,7 +81,7 @@ Note: Check the logs/output for password/token (`docker logs {container_name}`).
       - .NET Core SDK
         - Docker
           - [.NET Core SDK](https://hub.docker.com/_/microsoft-dotnet-core-sdk)
-            - [GitHub Dockerfile source for .NET Core SDK: 3.1.403 Alpine 3.12](https://github.com/dotnet/dotnet-docker/blob/63b8443439ec2ad494d704ced088e4657ea8f255/src/sdk/3.1/alpine3.12/amd64/Dockerfile)
+            - [GitHub Dockerfile source for .NET Core SDK: 3.1.404 Alpine 3.12](https://github.com/dotnet/dotnet-docker/blob/master/src/sdk/3.1/alpine3.12/amd64/Dockerfile)
             - [GitHub Dockerfile source for ASP.NET Core 2.1/3.1 Runtime: Alpine 3.12](https://github.com/dotnet/dotnet-docker/blob/63b8443439ec2ad494d704ced088e4657ea8f255/src/aspnet/3.1/alpine3.12/amd64/Dockerfile)
             - [GitHub Dockerfile source for .NET Core Runtime: Alpine 3.12](https://github.com/dotnet/dotnet-docker/blob/63b8443439ec2ad494d704ced088e4657ea8f255/src/runtime/3.1/alpine3.12/amd64/Dockerfile)
             - [GitHub Dockerfile source for .NET Core Runtime Dependencies: Alpine 3.12](https://github.com/dotnet/dotnet-docker/blob/c0e8be8a44b47b1dcc2a5b4b2ebd92022087ac0b/src/runtime-deps/3.1/alpine3.12/amd64/Dockerfile)
