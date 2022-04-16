@@ -10,29 +10,17 @@
 ![Python 3.9.12](https://img.shields.io/badge/Python-3.9.12-blue.svg?style=flat-square)
 ![TypeScript 4.1.2](https://img.shields.io/badge/TypeScript-4.1.2-blue.svg?style=flat-square)
 ![.NET Core SDK 6.0.202](https://img.shields.io/badge/.NET%20Core%20SDK-6.0.202-blue.svg?style=flat-square)
-![.NET Core SDK 5.0.407](https://img.shields.io/badge/.NET%20Core%20SDK-5.0.407-blue.svg?style=flat-square)
-![.NET Core SDK 3.1.418](https://img.shields.io/badge/.NET%20Core%20SDK-3.1.418-blue.svg?style=flat-square)
 
 Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://github.com/mikebirdgeneau/jupyterlab-docker)
 
-This image adds .NET Core 3 to `jdelemar/jupyter` notebook  
-
-**Screen shots**  
-<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterDotNetLauncher.png" alt="launcher" width="800" />  
-<img src="https://github.com/JDelemar/dockerfiles/raw/master/jupyterlab-dotnet/images/JupyterDotNet3.png" alt="TypeScript" width="800" />  
-
-## Try
-
-[![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/93f2c88e3fdb00ba7671ea5f68952647/raw/31d14019aa8aca0177894055bcd390f48c83961c/jupyterlab-dotnet.yml)
-
-Note: Check the logs/output for password/token (`docker logs {container_name}`). Also code is currently not executing in PWD  
+This image adds .NET Core 6 to `jdelemar/jupyter` notebook  
 
 ## How to use this image
 
 ### Quick start
 
 ```s
-  docker run -p 8888:8888 jdelemar/jupyterlab-dotnet
+  docker run -p 8888:8888 jdelemar/jupyterlab-dotnet:5
 ```
 
 ### Other Configurations
@@ -40,35 +28,30 @@ Note: Check the logs/output for password/token (`docker logs {container_name}`).
 #### Persist notebook data
 
 ```s
-  docker run -p 8888:8888 -v jupyter-data:/opt/app/data jdelemar/jupyterlab-dotnet
+  docker run -p 8888:8888 -v jupyter-data:/opt/app/data jdelemar/jupyterlab-dotnet:5
 ```
 
 #### Container info
 
 🐧 Alpine 3.15.4  
-📏 1.64GB  
+📏 1.8GB  
 🛳 8888  
 🌐 Jupyterlab 3.3.4  
 🌐 Python 3.9.12  
 🌐 TypeScript 4.1.2  
-🌐 .NET Core SDK 6.0.202/5.0.407/3.1.418
+🌐 .NET Core SDK 6.0.202
 
 #### Versions
 
 - Versions
   - Latest
-    - jdelemar/jupyterlab-dotnet:latest
-    - jdelemar/jupyterlab-dotnet:6.0.202
     - jdelemar/jupyterlab-dotnet:6
-    - jdelemar/jupyterlab-dotnet:5.0.407
-    - jdelemar/jupyterlab-dotnet:5
-    - jdelemar/jupyterlab-dotnet:3.1.418
-    - jdelemar/jupyterlab-dotnet:3
+    - jdelemar/jupyterlab-dotnet:6.0.202
 
 ## Sources
 
 - Sources
-  - [GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/jupyterlab-dotnet)  
+  - [GitHub source code](https://github.com/JDelemar/dockerfiles/tree/master/jupyterlab-dotnet5)  
   - [Docker repository](https://hub.docker.com/repository/docker/jdelemar/jupyterlab-dotnet)  
   - [Docker mikebirdgeneau/jupyterlab on Docker hub](https://hub.docker.com/r/mikebirdgeneau/jupyterlab), [Github](https://github.com/mikebirdgeneau/jupyterlab-docker)
   - TypeScript
@@ -85,8 +68,6 @@ Note: Check the logs/output for password/token (`docker logs {container_name}`).
   - Csharp
     - [Run C# Machine Learning Code Directly In A Jupyter Notebook](https://medium.com/machinelearningadvantage/run-c-machine-learning-code-directly-in-a-jupyter-notebook-a32e13e40b9c)
     - Microsoft
-      - dotnet
-        - [dotnet-docker on GitHub](https://github.com/dotnet/dotnet-docker)
       - .NET Core SDK
         - Docker
           - [.NET Core SDK](https://hub.docker.com/_/microsoft-dotnet-core-sdk)
