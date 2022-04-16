@@ -5,10 +5,10 @@
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/jdelemar/jupyterlab?sort=date)
 ![MicroBadger Layers](https://img.shields.io/microbadger/layers/jdelemar/jupyterlab)
 
-![Alpine 3.12.1](https://img.shields.io/badge/Alpine-3.12.1-blue.svg?style=flat-square)
-![Juypterlab 2.2.9](https://img.shields.io/badge/Jupyterlab-2.2.9-blue.svg?style=flat-square)
-![Python 3.9.0](https://img.shields.io/badge/Python-3.9.0-blue.svg?style=flat-square)
-![TypeScript 3.9.5](https://img.shields.io/badge/TypeScript-3.9.5-blue.svg?style=flat-square)
+![Alpine 3.15.4](https://img.shields.io/badge/Alpine-3.15.4-blue.svg?style=flat-square)
+![Juypterlab 3.3.4](https://img.shields.io/badge/Jupyterlab-3.3.4-blue.svg?style=flat-square)
+![Python 3.9.12](https://img.shields.io/badge/Python-3.9.12-blue.svg?style=flat-square)
+![TypeScript 4.1.2](https://img.shields.io/badge/TypeScript-4.1.2-blue.svg?style=flat-square)
 
 Jupyterlab Docker image based on [mikebirdgeneau/jupyterlab-docker](https://github.com/mikebirdgeneau/jupyterlab-docker)
 
@@ -36,20 +36,20 @@ This image adds ES6 and Typescript capabilities to the Jupyter Notebook
 
 #### Container info
 
-🐧 Alpine 3.12.1  
+🐧 Alpine 3.15.4  
 📏 921MB  
 🛳 8888  
-🌐 Jupyterlab 2.2.9  
-🌐 Python 3.9.0  
-🌐 TypeScript 3.9.5  
+🌐 Jupyterlab 3.3.4  
+🌐 Python 3.9.12  
+🌐 TypeScript 4.1.2  
 
 #### Versions
 
 - Versions
   - Latest
     - jdelemar/jupyterlab:latest
-    - jdelemar/jupyterlab:2.2.9
-    - jdelemar/jupyterlab:2.2.9-python-3.9.0-alpine-3.12.1
+    - jdelemar/jupyterlab:3.3.4
+    - jdelemar/jupyterlab:3.3.4-python-3.9.12-alpine-3.15.4
 
 ## Sources
 
