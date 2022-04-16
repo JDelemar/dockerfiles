@@ -37,7 +37,7 @@ This image adds ES6 and Typescript capabilities to the Jupyter Notebook
 #### Container info
 
 🐧 Alpine 3.15.4  
-📏 921MB  
+📏 1.05GB  
 🛳 8888  
 🌐 Jupyterlab 3.3.4  
 🌐 Python 3.9.12  
