@@ -1,5 +1,5 @@
 # vscode
-FROM jdelemar/ubuntu-lxde-base:0.2.0
+FROM jdelemar/ubuntu-lxde-base:0.4.0
 # source: jessfraz's vscode/Dockerfile https://github.com/jessfraz/dockerfiles/tree/master/vscode
 
 RUN curl -sSL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | apt-key add -
@@ -27,8 +27,14 @@ RUN apt-get update && apt-get -y install \
 		libxrender1 \
 		libxss1 \
 		libxtst6 \
-		--no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
+    --no-install-recommends
+
+RUN apt-get -y install git \
+		--no-install-recommends
+
+RUN rm -rf /var/lib/apt/lists/*
+
+RUN useradd --user-group --create-home --shell /bin/bash user
 
 ENV HOME /home/user
 
