@@ -1,4 +1,5 @@
 # Unofficial elFinder Docker image
+
 This images contains [elFinder](https://github.com/Studio-42/elFinder)
 
 ![elFinder image](image/elFinderScr.png)
@@ -8,28 +9,38 @@ From the author
 
 See [elFinder](https://github.com/Studio-42/elFinder) for more details
 
-# Try
+## Try
+
 [![Try in PWD](https://github.com/play-with-docker/stacks/raw/cff22438cb4195ace27f9b15784bbb497047afa7/assets/images/button.png)](http://play-with-docker.com/?stack=https://gist.githubusercontent.com/JDelemar/adf2a754765eda936a1749cbcad36057/raw/ded811b4d3d8d80447633ca51811c181b4d17cbd/elfinder.yml)
 
-# How to use this image
-## Quick start
-```bash
-    docker run -p 8080:80 jdelemar/elfinder
-``` 
+## How to use this image
 
-The file manager like application will be available in your browser at http://localhost:8080  
+### Quick start
+
+```bash
+  # test run
+  docker run -p 8080:80 jdelemar/elfinder
+
+  # connect to docker volume (readonly)
+  docker run --rm -p 8080:80 -v existing-volume:/var/www/html/files jdelemar/elfinder
+```
+
+The file manager like application will be available in your browser at `http://localhost:8080`  
 
 Files are located in the container at `/var/www/html/files` and by default have `www-data:www-data` permissions  
 
-# Container size
-420MB  
+## Container size
 
-# Sources
+407MB  
+
+## Sources
+
 GitHub source repository [JDelemar/elFinder](https://github.com/JDelemar/dockerfiles/tree/master/elFinder)  
 Docker repository [jdelemar/elFinder](https://hub.docker.com/r/jdelemar/elFinder/)  
 Original elFinder source [on GitHub](https://github.com/Studio-42/elFinder)  
 
-# License
+## License
+
 View [license information](https://github.com/JDelemar/dockerfiles/blob/master/elFinder/LISCENSE.md) for this elFinder Docker project.
 
 As with all Docker images, these likely also contain other software which may be under other licenses (such as Bash, etc from the base distribution, along with any direct or indirect dependencies of the primary software being contained).
