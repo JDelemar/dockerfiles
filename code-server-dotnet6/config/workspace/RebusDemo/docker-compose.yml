@@ -10,7 +10,14 @@ services:
       - SUDO_PASSWORD=Str0ngP@ssw0rd
       - DEFAULT_WORKSPACE=/config/workspace #optional
     # volumes:
-    #  - /root/config:/config
+    #   # Overwrites existing
+    #   - /Volumes/AppData/Programming/Docker/VSCode/Code-Server/config:/config
+    #   # # Try below or use: docker cp config/. code:/config
+    #   # #  To copy tar.gz config: docker cp code:/config/vscode-config-231119.tgz .
+    #   # - /Volumes/AppData/Programming/Docker/VSCode/Code-Server/config/data/User/settings.json:/config/data/User/settings.json
+    #   # - /Volumes/AppData/Programming/Docker/VSCode/Code-Server/config/data/User/keybindings.json:/config/data/User/keybindings.json
+    #   # - /Volumes/AppData/Programming/Docker/VSCode/Code-Server/config/workspace:/config/workspace
+    #   # - /Volumes/AppData/Programming/Docker/VSCode/Code-Server/config/.bashrc:/config/.bashrc
     ports:
       - 8443:8443
     restart: unless-stopped

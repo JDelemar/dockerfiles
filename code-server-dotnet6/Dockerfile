@@ -4,7 +4,7 @@ FROM lscr.io/linuxserver/code-server:amd64-4.19.0-ls182
 
 ENV DOTNET_ROOT=/config/.dotnet
 ENV DOTNET_FILE=dotnet-sdk-6.0.417-linux-x64.tar.gz
-ENV PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+ENV PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:/config/workspace/_scripts
 
 #============================================
 # dotnet 6
