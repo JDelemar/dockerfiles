@@ -1,0 +1,10 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+        "davidanson.vscode-markdownlint",
+        "aaron-bond.better-comments",
+        "nick-rudenko.back-n-forth",
+        "streetsidesoftware.code-spell-checker",
+        "ms-dotnettools.csharp"
+    ]
+}

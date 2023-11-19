@@ -1,0 +1,32 @@
+{
+  //============================================
+  // General Customizations
+  //============================================    
+  // editor
+  "keyboard.dispatch": "keyCode",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "workbench.colorTheme": "Default Dark Modern",
+  // workbench
+  "workbench.sideBar.location": "right",
+  "workbench.tree.indent": 20,
+  // extensions
+  "extensions.ignoreRecommendations": false,
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  // Language ----------------------------------
+  // Check if npm is installed for Automatic Type Acquisition.
+  "typescript.check.npmIsInstalled": false,
+  // Enable/disable references CodeLens in TypeScript files
+  "typescript.referencesCodeLens.enabled": true,
+  // Other -------------------------------------
+  // usage data and errors to be sent to a Microsoft online service
+  "telemetry.telemetryLevel": "off",
+  "files.associations": {
+      "*.hta": "html",
+      "*.env": "shellscript"
+  },
+  // Extensions --------------------------------
+  // Nx Console - opt out usage data
+  "nxConsole.enableTelemetry": false,
+}
