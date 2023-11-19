@@ -230,7 +230,7 @@ namespace Bootstrapper
               })
               .Transport(t =>
               {
-                t.UseSqlServer(Constant.ConnectionString.ApplicationContext, inputQueueName);
+                t.UseSqlServer(new SqlServerTransportOptions(Constant.ConnectionString.ApplicationContext), inputQueueName);
               })
               .Subscriptions(s =>
               {
